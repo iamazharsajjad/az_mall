@@ -13,11 +13,12 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-class Product < ApplicationRecord
-  belongs_to :vendor
-
-  validates :vendor_id, presence: true
-
-  has_many :product_categories, dependent: :destroy
-  has_many :categories, through: :product_categories
+FactoryBot.define do
+  factory :product do
+    title { 'My product' }
+    description { 'This Is My product' }
+    price { rand(1..100) }
+    currency { '$' }
+    vendor { FactoryBot.create(:vendor) }
+  end
 end
