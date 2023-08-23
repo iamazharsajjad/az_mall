@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <% @products&.each do |product| %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="box">
+                <div class="detail-box">
+                  <h6>
+                  <%= link_to vendors_product_path(product) do %>
+                    <%= product.title %>
+                  <% end %>
+                  </h6>
+                  <h6>
+                    Price</h6>
+                     <%= product.currency %><%= product.price %>
+                    <span>
+                    </span>
+                </div>
+              </a>
+            </div>
+          <% end %>
+        </div>
+    </div>
+    <div class="col-4">
+      <%= link_to "Add New Product", new_vendors_product_path %>
+    </div>
+  </div>
+</div>
