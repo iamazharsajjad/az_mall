@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Vendors
-  class CategoriesController < ApplicationController
+  class CategoriesController < MainController
   end
 end
