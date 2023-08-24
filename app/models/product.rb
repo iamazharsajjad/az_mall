@@ -17,6 +17,10 @@ class Product < ApplicationRecord
   belongs_to :vendor
 
   validates :vendor_id, presence: true
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :currency, presence: true
 
   has_many :product_categories, dependent: :destroy
   has_many :categories, through: :product_categories
