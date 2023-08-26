@@ -16,6 +16,8 @@
 FactoryBot.define do
   factory :vendor do
     email { 'a@a.com' }
+    username { 'a_123' }
     password { '123456' }
+    confirmed_at { Time.now }
   end
 end

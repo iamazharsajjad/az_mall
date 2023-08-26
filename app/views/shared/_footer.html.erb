@@ -29,7 +29,9 @@
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><%= link_to 'Become a Vendor', vendors_products_path %></li>
-
+              <% if vendor_signed_in? %>
+                <li><%= link_to "logout", destroy_vendor_session_path, method: :delete %></li>
+              <% end %>
           </ul>
       </div>
       <div class="col-lg-3">
