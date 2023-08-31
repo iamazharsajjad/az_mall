@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'home#index'
   devise_for :vendors
+
+  resources :products, only: %i[index show]
+
   namespace :vendors do
     resources :products
     resources :categories
@@ -11,4 +13,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'home#index'
 end
