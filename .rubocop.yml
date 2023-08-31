@@ -33,3 +33,5 @@ Style/Documentation:
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
 
+AllCops:
+  TargetRubyVersion: 2.X
