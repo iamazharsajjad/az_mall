@@ -71,7 +71,15 @@
                     </div>
                     <div class="total">
                       <div class="main-border-button">
-                        <%= link_to "Add to Cart", nil %>
+                        <%= form_with(url: carts_add_path) do |f| %>
+                          <%= f.hidden_field :id, value: @product.id %>
+                          <div class="field">
+                            <%= f.number_field :quantity, value: 0, min: 1 %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit "Add to Cart", class:'main-dark-button' %>
+                          </div>
+                        <% end %>
                       </div>
                     </div>
                 </div>

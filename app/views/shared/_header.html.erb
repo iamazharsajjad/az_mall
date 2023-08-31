@@ -35,6 +35,8 @@
                   </ul>
               </li>
               <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                  <%= render partial: 'carts/cart' if @render_cart %>
+
           </ul>
           <a class='menu-trigger'>
               <span>Menu</span>
