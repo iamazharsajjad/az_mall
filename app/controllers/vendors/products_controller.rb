@@ -7,7 +7,7 @@ module Vendors
     end
 
     def show
-      @product = current_vendor.products.find(params[:id])
+      @product = current_vendor.products.find_by(title: params[:slug])
     end
 
     def new
