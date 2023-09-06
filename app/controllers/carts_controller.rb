@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   def show; end
 
+  # rubocop:disable Metrics/AbcSize
   def add
     @product = Product.find_by(id: params[:id])
     quantity = params[:quantity].to_i
@@ -19,6 +20,7 @@ class CartsController < ApplicationController
       end
     end
   end
+  # rubocop:enable Metrics/AbcSize
 
   def remove
     Orderable.find_by(id: params[:id]).destroy
