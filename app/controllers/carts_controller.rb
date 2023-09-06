@@ -11,7 +11,7 @@ class CartsController < ApplicationController
 		elsif quantity <= 0 
 			@cart.orderables.destroy
 		else
-			@cart.orderables.create(product: @product, :quantity)
+			@cart.orderables.create(product: @product, quantity: quantity)
 		end
 
 		respond_to do |format|

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :products, only: %i[index show]
 
   namespace :vendors do
-    resources :products
+    resources :products, param: :slug
     resources :categories
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
