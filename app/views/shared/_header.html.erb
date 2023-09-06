@@ -37,10 +37,11 @@
               <li class="scroll-to-section"><a href="#explore">Explore</a></li>
                   <%# render partial: 'carts/cart' if @render_cart %>
               <li>
-                <button type="button" class="btn btn-demo" data-bs-toggle="modal" data-bs-target="#exampleModal">
-
+                <!-- <button type="button" class="btn btn-demo" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+                <%= link_to cart_path do%>
                   <i class="fa fa-shopping-cart"></i>
-                </button>
+                <% end %>
+                <!-- </button> -->
               </li>
           </ul>
           <a class='menu-trigger'>
